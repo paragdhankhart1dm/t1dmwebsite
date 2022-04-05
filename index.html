@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parag Dhankar - Blood Glucose Analyser</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+</head>
+
+<body onload="loadMain()">
+    <div class="header-div std-margins-vertical  section-margin-left section-margin-right">
+        <div class="container-fluid">
+            <div class="row" style="height: 80px;">
+                <div class="col-md-2 align-self-md-center">
+                    <div class="font-header-title my-auto">Parag Dhankar</div>
+                </div>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-5 align-self-md-center">
+                    <div class="align-content-center text-md-center">
+                        <a class="header-link" href="#Abstract">
+                            Abstract
+                        </a>
+                        <a class="header-link" href="#Features">
+                            Features
+                        </a>
+                        <!-- <a class="header-link" href="#Gallery">
+                            Gallery
+                        </a> -->
+                        <a class="header-link" href="#Code">
+                            Code
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 align-self-md-center">
+                    <div class="btn btn-small blue-button align-self-end blue-button-right">
+                        Read project report
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-margin-vertical section-margin-left section-margin-right">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5 col-md-push-5">
+                    <div class="font-title">
+                        Blood Glucose Analyser
+                    </div>
+                    <div class="font-normal margin-5-top">
+                        The BG Analyser predicts your Blood Glucose levels over three horizons. We use you blood glucose and carbohydrate data to provide the prediction. <br>Log in to explore more.
+                    </div>
+                    <div>
+                        <div class="btn btn-small blue-button margin-5-top"
+                            onclick="window.location.replace('vis.html')">
+                            Log in as <span id="username">Loading Profile</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6 col-md-pull-6">
+                    <img src="assets/imgs/header1.png" class="header-img">
+                </div>
+            </div>
+            <a name="Abstract"></a>
+            <div class="section-margin-vertical">
+                <div class="font-title">
+                    Abstract
+                </div>
+                <div class="font-normal margin-5-top">
+                    <p>According to the WHO, around 433 million people have diabetes, and 1.5 million deaths are
+                        directly
+                        attributed to diabetes each year (R S1).
+                    </p>
+
+                    <p>
+                        Diabetes is one of the fastest-growing chronic diseases in the world. In diabetic patients, the
+                        body
+                        loses the ability to maintain BG levels, causing multiple health complications. Several factors
+                        like
+                        physical exercise, carbohydrate intake, and stress affect the BG level in a patient (R Book,
+                        BG). A
+                        patient’s insulin dosage must be adjusted based on the current BG level, and a predicted value
+                        of
+                        the BG level (based on several factors such as carbohydrate intake, physical activity, etc) to
+                        prevent hyperglycaemia and mainly, hypoglycaemia. Therefore, an algorithm to accurately predict
+                        the
+                        BG level within the shortest Prediction Horizon is critical in efficient diabetes management.
+                    </p>
+                    <p>
+                        The thesis intends to develop a BG prediction algorithm based on a patient’s carbohydrate intake
+                        and
+                        insulin dosage. A LSTM model (ML-based approach) is developed to analyse the clinical data
+                        provided
+                        and use a time-series prediction paradigm to predict BG levels. The accuracy of the model across
+                        different prediction horizons is calculated using several performance metrics. Clinical data
+                        provided by the NHS was used to run experiments to determine the prediction accuracy over
+                        increasing
+                        Prediction Horizons. The code includes an API that allows researchers/users to interact with the
+                        model. Lastly, a web app has been provided to produce graphical visualisations for each patient.
+                    </p>
+                    <p>
+                        The project aims to interpret the results of the experiment and prove resourceful to researchers
+                        in
+                        the development of efficient BG prediction algorithms.
+                    </p>
+                </div>
+            </div>
+
+            <a name="Features"></a>
+            <div class="section-margin-vertical">
+                <div class="font-title">
+                    Features
+                </div>
+                <div class="row margin-5-top">
+                    <div class="col-md-6">
+                        <div class="feature-item-left feature-item align-content-center">
+                            <h3 class="feature-text">View continuous blood glucose data</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="feature-item-right feature-item">
+                            <h3>Analyse past BG and Insulin patters</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="feature-item-left feature-item">
+                            <h3>Predict blood glucose value for different horizons</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="feature-item-right feature-item">
+                            <h3>Warn about possible drop in blood glucose in the near future
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <a name = "Code"></a> -->
+            <!-- <div class="section-margin-vertical">
+                <div class="font-title">
+                    Gallery
+                </div>
+                
+            </div> -->
+
+            <a name="Code"></a>
+            <div class="section-margin-vertical">
+                <div class="font-title">
+                    Code
+                </div>
+                <div class="font-normal margin-5-top">
+                    This project is implemented and hosted on Google Colaboratory. The source code is hosted on GitHub.
+                    Find the source code <a href="https://github.com/paragdhankhart1dm/t1dmProject">here</a>.
+                </div>
+            </div>
+        </div>
+        <div class="section-margin-vertical"></div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

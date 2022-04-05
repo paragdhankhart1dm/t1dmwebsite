@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parag Dhankar - Blood Glucose Analyser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <link rel = "stylesheet" href="assets/css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</head>
+<body onload="onVisLoad()">
+    <div class="header-div std-margins-vertical  section-margin-left section-margin-right">
+        <div class="container-fluid">
+            <div class="row" style="height: 80px;">
+                <div class="col-md-2 align-self-md-center">
+                    <div class="font-header-title my-auto">Parag Dhankar</div>
+                </div>
+                <div class="col-md-1">
+                </div>
+                <div class="col-md-2 align-self-md-center">
+
+                </div>
+                <div class="col-md-3 align-self-md-center">
+                    <div class="user-profile">
+                        <div class="user-icon">
+                            <img src = "" id="user-icon">
+                        </div>
+                        <span class="user-name" id = "user-name">Dimitry Palette</span>
+                    </div>
+                </div>
+                <div class="col-md-4 align-self-md-center">
+                    <div class="btn btn-small blue-button align-self-end blue-button-right" onclick="window.location.replace('index.html')">
+                        Back to landing
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-margin-vertical section-margin-left section-margin-right">
+        <div class="container-fluid">
+            <div class="section-margin-vertical">
+                <div class="font-title">
+                    Blood glucose prediction for the next <span id='prediction_horizon'>15</span> minutes
+                </div>
+                <div class="font-normal margin-5-top graph">
+                    <img src="" id = "graph" height="100%">
+                </div>
+            </div>
+
+            <div class="section-margin-vertical">
+                <div class="font-title">
+                    Choose prediction horizon
+                </div>
+                <div class="row margin-5-top">
+                    <div class="col-md-4 ">
+                        <div class="horizon-button btn active-horizon " id="b5" onclick="changeHorizon(5)">
+                            5 Minutes
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="horizon-button btn active-horizon " id="b15" onclick="changeHorizon(15)">
+                            15 Minutes
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div class="horizon-button btn active-horizon " id="b30" onclick="changeHorizon(30)">
+                            30 Minutes
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-margin-vertical">
+                <div class="font-title">
+                    Interpretation
+                </div>
+                <div class="font-normal margin-5-top " id="normal_interpretation">
+                    Your blood glucose levels seem to lie in the normal range for the next <span id="prediction_horizon2">30</span> minutes. You should still look out for the following symptoms.
+                </div>
+                <div class="font-normal margin-5-top " id="warning_interpretation">
+                    <span class = "text-danger"><b>Warning:</b></span> <span>Prediction shows that if you do not consume high sugar foods or drinks within the next 15 minutes, your blood glucose will drop too low. This might lead to Hypoglycemia (low blood sugar). If you are experiencing any of the symptoms below, you should get medical attention immediately.</span>
+                </div>
+                <div class="font-normal margin-5-top " id="warning_interpretation">
+                    Symptoms: Confusion, heart palpitations, shakiness and anxiety
+                </div>
+            </div>
+
+            <div class="section-margin-vertical">
+                <div class="font-title">
+                    Advisory
+                </div>
+                <div class="font-normal margin-5-top ">
+                    Please note that accuracy of prediction decreases significantly with increase in prediction horizon.
+                </div><br>
+                <div class="btn btn-small blue-button" onclick="toggleAnalysis()" id= "analysisButton">
+                    View data analysis
+                </div>
+                <div class="analysis display margin-5-top" id = "analysis">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="section-margin-vertical"></div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datasource@0.1.0"></script> -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
